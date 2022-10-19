@@ -1,0 +1,53 @@
+:root {
+	// Primary
+	--primary: #ffec45;
+	--on-primary: #050401;
+	--primary-container: #353110;
+	--on-primary-container: #fff4a2;
+
+	// Secondary
+	--secondary: #7c7b74;
+	--on-secondary: #050401;
+	--secondary-container: #23221b;
+	--on-secondary-container: #ffffff;
+
+	// Tetriary
+	--tetriary: #6e45ff;
+	--on-tetriary: #ffffff;
+	--tetriary-container: #b3a1fc;
+	--on-tetriary-container: #2e2069;
+
+	// Surfaces/Background
+	--background: #050401;
+	--on-background: #f2f2f2;
+	--surface: #131312;
+	--on-surface: #f2f2f2;
+
+	// Surface elavations
+	--surface-1: #111004;
+	--surface-2: #191706;
+	--surface-3: #201e08;
+	--surface-4: #232009;
+	--surface-5: #28250b;
+
+	// Inverse
+	--inverse-surface: #f2f2f2;
+	--inverse-on-surface: #050401;
+	--inverse-primary: #6b6323;
+
+	// Surface Variant
+	--surface-variant: #1b1a18;
+	--on-surface-variant: #f2f2f2;
+	--surface-variant-outline: #5c5b55;
+	--outline-variant: #161615;
+
+	// Error
+	--error: #ff6b4e;
+	--on-error: #1a0400;
+	--error-container: #ffeae5;
+	--on-error-surface: #330900;
+
+	// disabled
+	--disabled: #21211e;
+	--on-disabled: #444444;
+}
