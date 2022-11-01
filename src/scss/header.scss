@@ -7,6 +7,8 @@
 	@include adaptiveValue("padding-top", 8, 4, 3, 1440, 375);
 	@include adaptiveValue("padding-bottom", 8, 4, 3, 1440, 375);
 
+	margin-bottom: rem(24);
+
 	border-bottom: rem(1) solid var(--outline-variant);
 	// .header__grid
 	&__grid {
