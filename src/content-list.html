@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('html/_head.htm',{
+"title":"Gloria"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+
+		<div class="listing-headline">
+			<div class="listing-headline__container">
+				<nav class="listing-headline__breadcrumbs breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">Найкращий український контент</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__current">Українські фільми</span>
+						</li>
+					</ul>
+				</nav>
+				<!-- breadcrumbs -->
+
+				<div class="listing-headline__heading heading-listing">
+
+					<div class="heading-listing__content content-block" id="content-list">
+						<h2 class="content-block__title">
+							<span class="content-block__text">українські фільми</span>
+							<div class="content-block__badge">245</div>
+						</h2>
+
+						<div class="listing-headline__filter heading-filter">
+							<div class="heading-filter__tabs heading-tabs">
+								<ul class="heading-tabs__list">
+									<li class="heading-tabs__item"><a href="#"
+											class="heading-tabs__link heading-tabs__link_active">Найкращі</a></li>
+									<li class="heading-tabs__item"><a href="#" class="heading-tabs__link">Гарячі</a></li>
+									<li class="heading-tabs__item"><a href="#" class="heading-tabs__link">Гарячі</a></li>
+									<li class="heading-tabs__item"><a href="#" class="heading-tabs__link">Гарячі</a></li>
+									<li class="heading-tabs__item"><a href="#" class="heading-tabs__link">Гарячі</a></li>
+									<li class="heading-tabs__item"><a href="#" class="heading-tabs__link">Гарячі</a></li>
+									<li class="heading-tabs__item"><a href="#" class="heading-tabs__link">Новинки</a></li>
+								</ul>
+							</div>
+							<button class="heading-filter__btn button-filter">
+								<img class="button-filter__icon" src="@img/icons/filter-icon.svg" alt="">
+								<span class="button-filter__text">Фільтр</span>
+								<span class="button-filter__badge button-filter__badge_no-null">23</span>
+							</button>
+						</div>
+					</div>
+					<!-- heading-listing__content content-list -->
+
+
+					<div class="feedback__content feedback-block" id="feedback-list">
+						<h2 class="feedback-block__title">
+							<span class="feedback-block__text">відгуки</span>
+							<div class="feedback-block__badge">245</div>
+						</h2>
+
+						<div class="feedback-block__tabs feedback-tabs">
+							<ul class="feedback-tabs__list">
+								<li class="feedback-tabs__item"><a href="#" class="feedback-tabs__link feedback-tabs__link_active">Усі
+										відгуки</a></li>
+								<li class="feedback-tabs__item"><a href="#" class="feedback-tabs__link">Відгуки відомих людей</a></li>
+								<li class="feedback-tabs__item"><a href="#" class="feedback-tabs__link">Фільми</a></li>
+								<li class="feedback-tabs__item"><a href="#" class="feedback-tabs__link">серіали</a></li>
+								<li class="feedback-tabs__item"><a href="#" class="feedback-tabs__link">мультфільми</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- feedback__content feedback-block feedback-list -->
+
+					<div class="another-profile__content another-profile-block" id="another-profile">
+						<div class="another-profile-block__title">
+							<div class="another-profile-block__img">
+								<img
+									src="https://images.unsplash.com/photo-1666934209536-08d839cd0973?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
+									alt="">
+							</div>
+							<span class="another-profile-block__text">загін кіноманів</span>
+						</div>
+
+						<button class="another-profile-block__button">
+							<span>відгуки</span>
+							<div class="another-profile-block__badge">4</div>
+						</button>
+					</div>
+					<!-- another-profile__content another-profile-block another-profile -->
+
+					<div class="user-profile__content user-profile-block" id="user-profile">
+						<div class="user-profile-block__title">
+							<div class="user-profile-block__img">
+								<img
+									src="https://images.unsplash.com/photo-1666934209536-08d839cd0973?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
+									alt="">
+							</div>
+							<span class="user-profile-block__text">Твій профіль</span>
+
+							<button type="button" class="user-profile-block__log-out">
+								<span>Вийти</span>
+								<img src="@img/icons/logout.svg" alt="">
+							</button>
+						</div>
+
+						<div class="user-profile__reviews reviews-user">
+							<button class="reviews-user__button reviews-user__button_active reviews-user__reviews">
+								<span>Твої відгуки</span>
+								<div class="reviews-user__badge">4</div>
+							</button>
+							<button class="reviews-user__button reviews-user__bookmark">
+								<span>Закладки</span>
+								<div class="reviews-user__badge">23</div>
+							</button>
+						</div>
+					</div>
+					<!-- user-profile__content user-profile-block another-profile -->
+
+				</div>
+
+			</div>
+		</div>
+		<main class="page">
+			@@include('html/_top-movie.htm',{})
+			@@include('html/_movie-cards.htm',{})
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+
+	<!-- <a href="" class="lucky"></a> -->
+</body>
+
+</html>

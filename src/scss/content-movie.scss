@@ -1,0 +1,227 @@
+.top-content {
+	margin-bottom: rem(180);
+	@include adaptiveValue("margin-bottom", 180, 16, 3, 1440, 375);
+	// .top-content__container
+	&__container {
+	}
+	// .top-content__cards
+	&__cards {
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: repeat(2, percent(540, 1260));
+			justify-content: space-between;
+			align-items: flex-start;
+			row-gap: rem(180);
+			@include adaptiveValue("row-gap", 180, 16, 3, 1440, 375);
+		}
+	}
+	// .top-content__card
+	&__card {
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+}
+.top-movie {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: linear-gradient(0deg, rgba(5, 4, 1, 0.5), rgba(5, 4, 1, 0.5));
+		z-index: 2;
+	}
+	// .top-movie__img-ibg
+	&__img-ibg {
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 100%;
+	}
+	@media (min-width: $mobile) {
+		&:nth-child(2) {
+			align-self: flex-end;
+			.top-movie__img-ibg {
+				padding-bottom: 84%;
+			}
+		}
+		&:nth-child(3) {
+			.top-movie__img-ibg {
+				padding-bottom: 67%;
+			}
+		}
+		&:nth-child(4) {
+			.top-movie__img-ibg {
+				padding-bottom: 50%;
+			}
+		}
+	}
+	// .top-movie__info
+	&__info {
+		position: relative;
+		z-index: 2;
+		padding: rem(16) rem(16);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+	&__bookmark {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		align-items: flex-start;
+		padding-top: rem(12);
+		justify-content: center;
+		width: rem(40);
+		height: rem(59);
+		background: url("@img/icons/bookmark-deco.svg") no-repeat top center / cover;
+	}
+	&__label {
+		position: absolute;
+		width: rem(80);
+		height: rem(80);
+		@include adaptiveValue("width", 80, 48, 3, 1440, 375);
+		@include adaptiveValue("height", 80, 48, 3, 1440, 375);
+		top: -3%;
+		left: -3%;
+		z-index: 2;
+		img {
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.info-card {
+	// .info-card__rate
+	&__rate {
+	}
+	// .info-card__content
+	&__content {
+	}
+}
+.rate-info {
+	display: flex;
+	margin-bottom: rem(24);
+	// .rate-info__block
+	&__block {
+		display: flex;
+		align-items: center;
+		font-weight: 800;
+		font-size: rem(16);
+		line-height: 100%;
+		@include adaptiveValue("font-size", 16, 14, 3, 1440, 375);
+		&:not(:last-child) {
+			margin-right: rem(24);
+		}
+	}
+	// .rate-info__icon
+	&__icon {
+		margin-right: rem(8);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 rem(20);
+		width: rem(20);
+		height: rem(20);
+		overflow: hidden;
+		border-radius: 50%;
+		svg {
+			max-width: rem(14);
+		}
+	}
+}
+.all-rate {
+	// .all-rate__icon
+	&__icon {
+		background-color: var(--primary);
+		svg {
+			path {
+				fill: var(--on-primary);
+			}
+		}
+	}
+	// .all-rate__text
+	&__text {
+		color: var(--primary);
+	}
+}
+.my-rate {
+	// .my-rate__icon
+	&__icon {
+		background-color: var(--tetriary);
+		svg {
+			path {
+				fill: var(--on-tetriary);
+			}
+		}
+	}
+	// .my-rate__text
+	&__text {
+		color: var(--on-background);
+	}
+}
+.no-rating {
+	// .no-rating__icon
+	&__icon {
+		background-color: var(--secondary);
+		svg {
+			path {
+				fill: var(--surface-variant-outline);
+			}
+		}
+	}
+	// .no-rating__text
+	&__text {
+	}
+}
+.content-card {
+	// .content-card__title
+	&__title {
+		font-family: "Rubik Mono One";
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(20);
+		line-height: 120%;
+		color: var(--on-surface);
+		&:not(:last-child) {
+			margin-bottom: em(8, 20);
+		}
+	}
+	// .content-card__list
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	// .content-card__item
+	&__item {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			&::after {
+				content: "";
+				margin: 0 rem(8);
+				width: rem(2);
+				height: rem(2);
+				border-radius: 50%;
+				background-color: var(--secondary);
+			}
+		}
+	}
+	// .content-card__link
+	&__link {
+		font-weight: 500;
+		font-size: rem(12);
+		line-height: 130%;
+		color: var(--secondary);
+		text-decoration: none;
+	}
+}
