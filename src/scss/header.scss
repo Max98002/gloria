@@ -1,5 +1,10 @@
 //====================================================================================================
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
 	padding: 0 rem(16);
 
 	padding-top: rem(8);
@@ -10,6 +15,7 @@
 	margin-bottom: rem(24);
 
 	border-bottom: rem(1) solid var(--outline-variant);
+	z-index: 2;
 	// .header__grid
 	&__grid {
 		display: grid;
