@@ -3,3 +3,197 @@
 @import "movie-cards";
 @import "content-page";
 //====================================================================================================
+.main-page {
+	// .main-page__container
+	&__container {
+	}
+	// .main-page__block
+	&__block {
+		margin-top: rem(50);
+		padding-top: rem(48);
+		padding-bottom: rem(48);
+		@include adaptiveValue("padding-top", 48, 40, 3, 1440, 375);
+		@include adaptiveValue("padding-bottom", 48, 40, 3, 1440, 375);
+	}
+	// .main-page__title
+	&__title {
+		font-family: "Rubik Mono One";
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(65);
+		@include adaptiveValue("font-size", 64, 32, 3, 1440, 375);
+		line-height: 104%;
+		text-transform: uppercase;
+		color: var(--primary);
+	}
+	// .main-page__list
+	&__list {
+	}
+}
+
+.list-main-page {
+	// .list-main-page__menu
+	&__menu {
+	}
+}
+.menu-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	// .menu-list__link
+	&__link {
+		flex: 1 1 100%;
+		width: 100%;
+		padding: rem(24) rem(16);
+		@include adaptiveValue("padding-top", 24, 16, 3, 1440, 375);
+		@include adaptiveValue("padding-bottom", 24, 16, 3, 1440, 375);
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		background: #050401;
+		border: 1px solid var(--outline-variant);
+
+		@media (any-hover: hover) {
+			&:hover {
+				.menu-list__block {
+					opacity: 1;
+					pointer-events: auto;
+				}
+				.menu-list__text {
+					color: var(--primary);
+				}
+				.menu-list__icon {
+					svg path {
+						fill: var(--primary);
+					}
+				}
+			}
+		}
+		&.soon_active {
+			.menu-list__block {
+				opacity: 0;
+				pointer-events: none;
+			}
+			.menu-list__text {
+				color: var(--on-disable);
+			}
+			.menu-list__icon {
+				svg path {
+					fill: var(--on-disabled);
+				}
+			}
+			.soon {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+	// .menu-list__text
+	&__text {
+		flex: 0 0 auto;
+		font-family: "Rubik Mono One";
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(41);
+		@include adaptiveValue("font-size", 41, 28, 3, 1440, 375);
+		line-height: 113%;
+		text-transform: uppercase;
+		color: #f2f2f2;
+		margin-right: rem(24);
+		margin-left: rem(34);
+		@include adaptiveValue("margin-left", 34, 12, 3, 1440, 375);
+		@include adaptiveValue("margin-right", 24, 0, 3, 1440, 375);
+		transition: color 300ms ease 0s;
+	}
+	// .menu-list__icon
+	&__icon {
+		svg path {
+			transition: all 300ms ease 0s;
+		}
+	}
+	// .menu-list__block
+	&__block {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			width: rem(123);
+			height: 100%;
+			background: linear-gradient(
+				90deg,
+				#050401 16.67%,
+				rgba(5, 4, 1, 0) 100.58%
+			);
+			transform: translateY(-50%);
+			z-index: 10;
+		}
+		&::before {
+			right: 0;
+			transform: translateY(-50%) scale(-1, 1);
+		}
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 300ms ease 0s;
+
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+}
+.menu-top {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	// .menu-top__item
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		&::after {
+			content: "";
+			display: inline-flex;
+			width: rem(16);
+			height: rem(16);
+			border-radius: 50%;
+			background-color: var(--primary);
+			margin: 0 rem(32);
+		}
+	}
+	// .menu-top__text
+	&__text {
+		font-family: "Rubik Mono One";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 41px;
+		line-height: 113%;
+		text-transform: uppercase;
+		margin-right: rem(32);
+	}
+	// .menu-top__image
+	&__image {
+		position: relative;
+		width: rem(80);
+		height: rem(46);
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: linear-gradient(0deg, rgba(5, 4, 1, 0.4), rgba(5, 4, 1, 0.4));
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

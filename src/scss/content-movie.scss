@@ -232,6 +232,28 @@
 		color: var(--secondary);
 		text-decoration: none;
 	}
+	&__block {
+	}
+	&__gallery {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: rem(8);
+		font-weight: 500;
+
+		line-height: 113%;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+	&__actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 .rate-movie {
 	padding: rem(9) rem(13);

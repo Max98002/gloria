@@ -73,6 +73,18 @@
 			height: 50%;
 		}
 	}
+	.breadcrumbs__link {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	.listing-headline__breadcrumbs {
+		margin: 0;
+	}
+	&__breadcrumbs {
+		display: flex;
+		align-items: center;
+	}
 }
 .gallery-hero {
 	position: absolute;
@@ -152,8 +164,10 @@
 .info-about {
 	display: flex;
 	flex-direction: column;
-	flex: 1 1 rem(480);
-	max-width: rem(480);
+	@media (min-width: $mobile) {
+		flex: 1 1 rem(480);
+		max-width: rem(480);
+	}
 	&__block {
 		.rate-info {
 			margin-bottom: rem(32);
@@ -317,6 +331,11 @@
 	}
 	// .reviews-page__summary
 	&__summary {
+		@media (min-width: $mobile) {
+			position: sticky;
+			top: rem(70);
+			left: 0;
+		}
 	}
 	// .reviews-page__block
 	&__block {
@@ -324,6 +343,42 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
+	}
+	// .reviews-page__more
+	&__more {
+		margin: 0 auto;
+		margin-top: rem(32);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(8);
+		border-radius: rem(45);
+
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: 122%;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: var(--on-surface);
+
+		transition: all 300ms ease 0s;
+
+		svg path {
+			transition: all 300ms ease 0s;
+		}
+
+		padding: rem(16) rem(28);
+		border: 4px solid var(--surface-variant-outline);
+		&:hover {
+			border-color: var(--primary);
+			color: var(--primary);
+			svg path {
+				fill: var(--primary);
+			}
+		}
+		@media (max-width: $mobile) {
+			padding: rem(13) rem(25);
+		}
 	}
 }
 .summary-reviews {
@@ -448,3 +503,127 @@
 	}
 }
 //========================================================
+.actors-page {
+	// .actors-page__container
+	&__container {
+	}
+	// .actors-page__title
+	&__title {
+		font-weight: 800;
+		font-size: rem(32);
+		@include adaptiveValue("font-size", 32, 22, 3, 1440, 375);
+		line-height: 112%;
+		color: var(--on-background);
+		&:not(:last-child) {
+			margin-bottom: em(32, 32);
+		}
+	}
+	// .actors-page__block
+	&__block {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	// .actors-page__card
+	&__card {
+		width: 100%;
+	}
+	// .actors-page__more
+	&__more {
+		margin: 0 auto;
+		margin-top: rem(32);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(8);
+		border-radius: rem(45);
+
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: 122%;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: var(--on-surface);
+
+		transition: all 300ms ease 0s;
+
+		svg path {
+			transition: all 300ms ease 0s;
+		}
+
+		padding: rem(16) rem(28);
+		border: 4px solid var(--surface-variant-outline);
+		&:hover {
+			border-color: var(--primary);
+			color: var(--primary);
+			svg path {
+				fill: var(--primary);
+			}
+		}
+		@media (max-width: $mobile) {
+			padding: rem(13) rem(25);
+		}
+	}
+}
+//========================================================
+.reviews-page {
+	// .reviews-page__no-reviews
+	&__no-reviews {
+		border: 4px solid #161615;
+		border-radius: rem(32);
+		padding-top: rem(40);
+		padding-bottom: rem(77);
+		padding-left: rem(45);
+		padding-right: rem(45);
+	}
+}
+.no-reviews {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	// .no-reviews__image
+	&__image-ibg {
+		width: percent(200, 1260);
+		padding-bottom: percent(200, 1260);
+		min-width: rem(160);
+		min-height: rem(160);
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
+	// .no-reviews__text
+	&__text {
+		max-width: rem(540);
+		margin: 0 auto;
+		text-align: center;
+		font-family: "Rubik Mono One";
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(29);
+		@include adaptiveValue("font-size", 29, 20, 3, 1440, 375);
+		line-height: 110%;
+		text-transform: uppercase;
+		color: var(--on-surface);
+		&:not(:last-child) {
+			margin-bottom: em(32, 29);
+		}
+	}
+	.rate-movie {
+		padding: rem(16) rem(28);
+		font-size: rem(16);
+		@include adaptiveValue("font-size", 16, 14, 3, 1440, 375);
+		svg {
+			width: rem(24);
+			height: rem(24);
+			@media (max-width: $mobile) {
+				width: rem(20);
+				height: rem(20);
+			}
+		}
+		@media (max-width: $mobile) {
+			padding: rem(12) rem(16);
+		}
+	}
+}

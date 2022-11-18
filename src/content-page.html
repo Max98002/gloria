@@ -13,7 +13,7 @@
       <div class="page__hero hero-page">
 
         <div class="listing-headline content-page__breadcrumbs">
-          <div class="listing-headline__container">
+          <div class="listing-headline__container hero-page__breadcrumbs">
             <nav class="listing-headline__breadcrumbs breadcrumbs">
               <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -27,6 +27,38 @@
                 </li>
               </ul>
             </nav>
+            <button class="listing-headline__bookmark">
+              <svg width="40" height="58" viewBox="0 0 40 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_bd_5201_8668)">
+                  <path d="M0 0H40V56L20.4484 46.1916C20.1662 46.0501 19.8338 46.0501 19.5516 46.1916L0 56V0Z"
+                    fill="#050401" fill-opacity="0.3" shape-rendering="crispEdges"></path>
+                  <path
+                    d="M0.5 0.5H39.5V55.1898L20.6726 45.7447C20.2493 45.5324 19.7507 45.5324 19.3274 45.7447L0.5 55.1898V0.5Z"
+                    stroke="#5C5B55" stroke-opacity="0.3" shape-rendering="crispEdges"></path>
+                </g>
+                <defs>
+                  <filter id="filter0_bd_5201_8668" x="-44" y="-44" width="128" height="144"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="22"></feGaussianBlur>
+                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_5201_8668">
+                    </feComposite>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"></feColorMatrix>
+                    <feOffset dy="2"></feOffset>
+                    <feComposite in2="hardAlpha" operator="out"></feComposite>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"></feColorMatrix>
+                    <feBlend mode="normal" in2="effect1_backgroundBlur_5201_8668" result="effect2_dropShadow_5201_8668">
+                    </feBlend>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_5201_8668" result="shape">
+                    </feBlend>
+                  </filter>
+                </defs>
+              </svg>
+              <span>
+                <img src="img/icons/plus.svg" alt="">
+              </span>
+            </button>
           </div>
         </div>
 
@@ -215,23 +247,43 @@
 
                 <h3 class="info-about__title">Снайпер. Білий ворон</h3>
 
-                <ul class="content-card__list info-about__list">
-                  <li class="content-card__item">
-                    <div class="content-card__link">Бойовик</div>
-                  </li>
-                  <li class="content-card__item">
-                    <div class="content-card__link">Воєнний</div>
-                  </li>
-                  <li class="content-card__item">
-                    <div class="content-card__link">2021</div>
-                  </li>
-                  <li class="content-card__item">
-                    <div class="content-card__link">1 год 12 хв</div>
-                  </li>
-                  <li class="content-card__item">
-                    <div class="content-card__link">18+</div>
-                  </li>
-                </ul>
+
+                <div data-showmore="size" data-showmore-media="736,max" class="content-card__block">
+                  <ul data-showmore-content="0" class="content-card__list info-about__list">
+                    <li class="content-card__item">
+                      <div class="content-card__link">Бойовик</div>
+                    </li>
+                    <li class="content-card__item">
+                      <div class="content-card__link">Воєнний</div>
+                    </li>
+                    <li class="content-card__item">
+                      <div class="content-card__link">Документальний</div>
+                    </li>
+                    <li class="content-card__item">
+                      <div class="content-card__link">2021</div>
+                    </li>
+                    <li class="content-card__item">
+                      <div class="content-card__link">1 год 12 хв</div>
+                    </li>
+                    <li class="content-card__item">
+                      <div class="content-card__link">18+</div>
+                    </li>
+                  </ul>
+
+                  <div class="content-card__actions">
+                    <button hidden data-showmore-button type="button" class="block__more">
+                      <span>Деталі</span>
+                      <span>сховати</span>
+                    </button>
+
+                    <a href="" class="content-card__gallery">
+                      <img src="@img/icons/gallery.svg" alt="">
+                      <span>фото/відео</span>
+                    </a>
+
+                  </div>
+
+                </div>
 
               </div>
               <div class="about-hero__btns btns-about">
@@ -406,7 +458,109 @@
                   <li class="date-reviews__item">Переглянути оригінал</li>
                 </ul>
               </div>
+
+              <button class="reviews-page__more">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18 9.04933L13.3552 13.7436V3.98956L10.6583 3.9835V13.7375L6.01349 9.02239V12.8857L12.0067 18.9697L18 12.9126V9.04933Z"
+                    fill="white" />
+                </svg>
+                <span>Показати ще</span>
+              </button>
             </div>
+          </div>
+          <div class="reviews-page__no-reviews no-reviews">
+            <div class="no-reviews__image-ibg">
+              <img src="@img/content-page/illustration.svg" alt="">
+            </div>
+            <div class="no-reviews__text">
+              Поділись своєю думкою про цей фільм
+            </div>
+            <button class="rate-info__block rate-movie">
+              <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_4903_7905)">
+                  <path
+                    d="M21.6531 7.36413L18.0622 2.12451C17.0692 0.675581 14.9308 0.675584 13.9378 2.12451L10.3469 7.36413C10.1518 7.64872 9.86465 7.85738 9.5337 7.95493L3.44088 9.75099C1.756 10.2477 1.09522 12.2813 2.16638 13.6735L6.03989 18.7078C6.25028 18.9812 6.35998 19.3189 6.35049 19.6638L6.17586 26.0134C6.12756 27.7693 7.8575 29.0262 9.51253 28.4376L15.4974 26.3094C15.8225 26.1938 16.1775 26.1938 16.5026 26.3094L22.4875 28.4376C24.1425 29.0262 25.8724 27.7693 25.8241 26.0134L25.6495 19.6638C25.64 19.3189 25.7497 18.9812 25.9601 18.7078L29.8336 13.6735C30.9048 12.2813 30.244 10.2477 28.5591 9.75099L22.4663 7.95493C22.1354 7.85738 21.8482 7.64872 21.6531 7.36413Z"
+                    fill="#FFEC45" stroke="#161615"></path>
+                </g>
+                <defs>
+                  <filter id="filter0_d_4903_7905" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"></feColorMatrix>
+                    <feOffset dx="2" dy="2"></feOffset>
+                    <feComposite in2="hardAlpha" operator="out"></feComposite>
+                    <feColorMatrix type="matrix"
+                      values="0 0 0 0 0.0196078 0 0 0 0 0.0156863 0 0 0 0 0.00392157 0 0 0 1 0"></feColorMatrix>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4903_7905"></feBlend>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4903_7905" result="shape">
+                    </feBlend>
+                  </filter>
+                </defs>
+              </svg>
+              <span>Оцінити</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="page__actors actors-page">
+        <div class="actors-page__container">
+          <div class="actors-page__title">Актори</div>
+          <div class="actors-page__block">
+            <a href="" class="actors-page__card card-actors">
+              <div class="card-actors__img">
+                <img
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                  alt="">
+              </div>
+              <div class="card-actors__info">
+                <div class="card-actors__name">Ніколь Науменко</div>
+                <div class="card-actors__role">Стефанія</div>
+              </div>
+            </a>
+            <a href="" class="actors-page__card card-actors">
+              <div class="card-actors__img">
+                <img
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                  alt="">
+              </div>
+              <div class="card-actors__info">
+                <div class="card-actors__name">Ніколь Науменко</div>
+                <div class="card-actors__role">Стефанія</div>
+              </div>
+            </a>
+            <a href="" class="actors-page__card card-actors">
+              <div class="card-actors__img">
+                <img
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                  alt="">
+              </div>
+              <div class="card-actors__info">
+                <div class="card-actors__name">Ніколь Науменко</div>
+                <div class="card-actors__role">Стефанія</div>
+              </div>
+            </a>
+            <a href="" class="actors-page__card card-actors">
+              <div class="card-actors__img">
+                <img
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                  alt="">
+              </div>
+              <div class="card-actors__info">
+                <div class="card-actors__name">Ніколь Науменко</div>
+                <div class="card-actors__role">Стефанія</div>
+              </div>
+            </a>
+            <button class="actors-page__more">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 9.04933L13.3552 13.7436V3.98956L10.6583 3.9835V13.7375L6.01349 9.02239V12.8857L12.0067 18.9697L18 12.9126V9.04933Z"
+                  fill="white" />
+              </svg>
+              <span>Усі актори</span>
+            </button>
           </div>
         </div>
       </div>
