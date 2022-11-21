@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221121144753">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221121171004">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -703,9 +703,91 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221121144753"></script>
+	<script src="js/app.min.js?_v=20221121171004"></script>
 
 	<!-- <a href="" class="lucky"></a> -->
+
+	<!-- додавання класу active викликає цей попап з фільтрами -->
+	<div class="popup-look">
+		<div class="popup-look__wrapper">
+			<div class="popup-look__image">
+				<img src="img/icons/TV.svg" alt="">
+			</div>
+			<div class="popup-look__content">
+				<div class="popup-look__text">Дивитись на:</div>
+				<div class="popup-look__actions actions-look">
+					<button class="actions-look__btn btn-look">
+						<div class="btn-look__icon">
+							<picture><source srcset="img/content-page/look-image.webp" type="image/webp"><img src="img/content-page/look-image.png" alt=""></picture>
+						</div>
+						<div class="btn-look__info">
+							<div class="btn-look__title">Netflix</div>
+							<div class="btn-look__price">Безкоштовно</div>
+						</div>
+					</button>
+					<button class="actions-look__btn btn-look">
+						<div class="btn-look__icon">
+							<picture><source srcset="img/content-page/look-image.webp" type="image/webp"><img src="img/content-page/look-image.png" alt=""></picture>
+						</div>
+						<div class="btn-look__info">
+							<div class="btn-look__title">Megogo</div>
+							<div class="btn-look__price">30 грн</div>
+						</div>
+					</button>
+				</div>
+			</div>
+			<div class="popup-look__toolbar toolbar-look">
+				<button class="toolbar-look__close">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 6.41487L6.41487 5L12 10.5851L17.5851 5L19 6.41487L13.4149 12L19 17.5851L17.5851 19L12 13.4149L6.41487 19L5 17.5851L10.5851 12L5 6.41487Z" fill="#F2F2F2" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-rate">
+		<div class="popup-rate__wrapper">
+			<div class="popup-rate__content">
+				<div class="popup-rate__image">
+					<picture><source srcset="img/content-page/image-card.webp" type="image/webp"><img src="img/content-page/image-card.png" alt=""></picture>
+				</div>
+
+				<div class="popup-rate__text">Оціни фільм</div>
+
+				<div class="rating rating_set">
+					<div class="rating__body">
+						<div class="rating__active"></div>
+						<div class="rating__items">
+							<input type="radio" class="rating__item" value="1" name="rating">
+							<input type="radio" class="rating__item" value="2" name="rating">
+							<input type="radio" class="rating__item" value="3" name="rating">
+							<input type="radio" class="rating__item" value="4" name="rating">
+							<input type="radio" class="rating__item" value="5" name="rating">
+						</div>
+					</div>
+					<div class="rating__value">3.6</div>
+				</div>
+
+				<form class="form popup-rate__form" action="#">
+					<div class="form__line">
+						<textarea data-autoheight-min="400" placeholder="Напиши відгук..." class="form__textarea" name="message" data-autoheight></textarea>
+					</div>
+				</form>
+
+			</div>
+			<div class="popup-rate__toolbar toolbar-rate">
+				<button class="popup-rate__close">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="#B3A1FC" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 6.41487L6.41487 5L12 10.5851L17.5851 5L19 6.41487L13.4149 12L19 17.5851L17.5851 19L12 13.4149L6.41487 19L5 17.5851L10.5851 12L5 6.41487Z" fill="#F2F2F2" />
+					</svg>
+				</button>
+				<button class="popup-rate__evaluate">
+					Оцінити
+				</button>
+			</div>
+		</div>
+	</div>
 
 </body>
 
