@@ -2,6 +2,12 @@
 @import "content-movie";
 @import "movie-cards";
 @import "content-page";
+@import "feedback-list";
+@import "another-profile";
+@import "user-profile";
+@import "creator-list";
+@import "creator-page";
+@import "login";
 //====================================================================================================
 .main-page {
 	// .main-page__container
@@ -28,9 +34,10 @@
 	}
 	// .main-page__list
 	&__list {
+		padding-bottom: rem(64);
+		@include adaptiveValue("padding-bottom", 64, 32, 3, 1440, 375);
 	}
 }
-
 .list-main-page {
 	// .list-main-page__menu
 	&__menu {

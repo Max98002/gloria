@@ -1,0 +1,89 @@
+.user-profile {
+	// .user-profile__container
+	&__container {
+		@media (max-width: $mobile) {
+			padding: 0;
+		}
+	}
+	// .user-profile__comments
+	&__comments {
+	}
+}
+.comments-block {
+	// .comments-block__card
+	&__card {
+	}
+}
+
+.no-comments-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	// .no-reviews__image
+	&__image-ibg {
+		width: percent(200, 1260);
+		padding-bottom: percent(200, 1260);
+		min-width: rem(160);
+		min-height: rem(160);
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
+	// .no-reviews__text
+	&__text {
+		max-width: rem(720);
+		margin: 0 auto;
+		text-align: center;
+		font-family: "Rubik Mono One";
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(29);
+		@include adaptiveValue("font-size", 29, 20, 3, 1440, 375);
+		line-height: 110%;
+		text-transform: uppercase;
+		color: var(--on-surface);
+		&:not(:last-child) {
+			margin-bottom: em(32, 29);
+		}
+	}
+}
+
+.user-profile {
+	// .user-profile__preservation
+	&__preservation {
+	}
+}
+.preservation-block {
+	// .preservation-block__container
+	&__container {
+	}
+	// .preservation-block__wrapper
+	&__wrapper {
+	}
+	// .preservation-block__card
+	&__card {
+		position: relative;
+	}
+	// .preservation-block__save
+	&__save {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: rem(40);
+		height: rem(56);
+		svg {
+			path {
+				fill: var(--tetriary);
+			}
+		}
+		img {
+			position: absolute;
+			width: rem(24);
+			height: rem(24);
+			top: rem(8);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}

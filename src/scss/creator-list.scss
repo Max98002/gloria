@@ -1,0 +1,39 @@
+.creator-search {
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: rem(8);
+	// .creator-search__button
+	&__button {
+	}
+	// .creator-search__inpuy
+	&__input {
+		padding: rem(6) rem(8);
+		font-weight: 500;
+		font-size: rem(14);
+		line-height: 113%;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: var(--secondary);
+		background-color: transparent;
+		outline: none;
+	}
+	// .creator-search__close
+	&__close {
+	}
+}
+
+.page {
+}
+.creator-list {
+	// .creator-list__container
+	&__container {
+	}
+	// .creator-list__block
+	&__block {
+	}
+	// .creator-list__card
+	&__card {
+	}
+}

@@ -1,0 +1,17 @@
+.another-profile {
+	// .another-profile__container
+	&__container {
+		@media (max-width: $mobileSmall) {
+			padding: 0;
+		}
+	}
+	// .another-profile__block
+	&__block {
+		padding-top: rem(84);
+		@include adaptiveValue("padding-top", 84, 56, 3, 1440, 375);
+		padding-bottom: rem(136);
+	}
+	// .another-profile__card
+	&__card {
+	}
+}

@@ -1,0 +1,17 @@
+.creator-page__save {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: rem(40);
+	height: rem(56);
+
+	background: rgba(5, 4, 1, 0.3);
+	img {
+		position: absolute;
+		top: rem(8);
+		left: 50%;
+		transform: translateX(-50%);
+		width: rem(24);
+		height: rem(24);
+	}
+}

@@ -72,6 +72,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"masonry-layout": "^4.2.2",
 		"simplebar": "latest"
 	}
 }

@@ -1,0 +1,88 @@
+.login {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: var(--background);
+	z-index: 100;
+	// .login__wrapper
+	&__wrapper {
+		padding: 0 rem(24);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+	// .login__block
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+	// .login__title
+	&__title {
+		text-align: center;
+		font-family: "Rubik Mono One";
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(41);
+		@include adaptiveValue("font-size", 41, 29, 3, 1440, 375);
+		line-height: 113%;
+		text-transform: uppercase;
+		color: var(--primary);
+		&:not(:last-child) {
+			margin-bottom: em(12, 41);
+		}
+	}
+	// .login__subtitle
+	&__subtitle {
+		text-align: center;
+		font-weight: 400;
+		font-size: rem(18);
+		line-height: 131%;
+		color: #f2f2f2;
+		margin-bottom: rem(80);
+	}
+	// .login__actions
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(24);
+	}
+}
+.login-actions {
+	// .login-actions__btn
+	&__btn {
+		padding: rem(16) rem(28);
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: rem(8);
+		background: #050401;
+		/* Neutral/Outline */
+
+		border: 4px solid #5c5b55;
+		border-radius: 45px;
+
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: 122%;
+		/* identical to box height, or 20px */
+
+		text-align: center;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+
+		/* Surfaces/On Surface */
+
+		color: #f2f2f2;
+		img {
+			width: rem(24);
+			height: rem(24);
+		}
+	}
+}

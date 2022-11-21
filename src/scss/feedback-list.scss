@@ -1,0 +1,22 @@
+.feedback-page {
+	// .feedback-page__container
+	&__container {
+	}
+	// .feedback-page__cards
+	&__cards {
+		margin: 0 auto;
+	}
+	// .feedback-page__block
+	&__block {
+		padding-top: rem(136);
+		@include adaptiveValue("padding-top", 136, 72, 3, 1440, 375);
+		padding-bottom: rem(104);
+	}
+}
+.feedback {
+	// .feedback__card
+	&__card {
+		max-width: rem(360);
+		width: 100%;
+	}
+}

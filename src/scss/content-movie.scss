@@ -1,6 +1,8 @@
 .top-content {
 	margin-bottom: rem(180);
 	@include adaptiveValue("margin-bottom", 180, 16, 3, 1440, 375);
+	padding-top: rem(72);
+	@include adaptiveValue("padding-top", 72, 48, 3, 1440, 375);
 	// .top-content__container
 	&__container {
 	}
