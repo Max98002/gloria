@@ -564,16 +564,9 @@
           </div>
         </div>
       </div>
-
-
     </main>
     @@include('html/_footer.htm',{})
   </div>
-  @@include('html/_popup.htm',{})
-  @@include('html/_js.htm',{})
-
-  <!-- <a href="" class="lucky"></a> -->
-
   <!-- додавання класу active викликає цей попап з фільтрами -->
   <div class="popup-look">
     <div class="popup-look__wrapper">
@@ -614,7 +607,6 @@
       </div>
     </div>
   </div>
-
   <div class="popup-rate">
     <div class="popup-rate__wrapper">
       <div class="popup-rate__content">
@@ -640,7 +632,7 @@
 
         <form class="form popup-rate__form" action="#">
           <div class="form__line">
-            <textarea data-autoheight-min="400" placeholder="Напиши відгук..." class="form__textarea" name="message"
+            <textarea data-autoheight-min="121" placeholder="Напиши відгук..." class="form__textarea" name="message"
               data-autoheight></textarea>
           </div>
         </form>
@@ -660,6 +652,39 @@
       </div>
     </div>
   </div>
+  <div class="popup-share active">
+    <div class="popup-share__wrapper">
+      <div class="popup-share__content">
+        <div class="popup-share__image">
+          <img src="@img/content-page/share.png" alt="">
+        </div>
+        <div class="popup-share__text">поділись своєю оцінкою в:</div>
+        <div class="popup-share__btns btns-share">
+          <button class="btns-share__btn">
+            <img src="@img/icons/facebook.svg" alt="">
+            <span>facebook</span>
+          </button>
+          <button class="btns-share__btn">
+            <img src="@img/icons/twitter-icon.svg" alt="">
+            <span>twitter</span>
+          </button>
+        </div>
+      </div>
+      <div class="popup-share__toolbar toolbar-rate">
+        <button class="popup-share__close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#B3A1FC" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5 6.41487L6.41487 5L12 10.5851L17.5851 5L19 6.41487L13.4149 12L19 17.5851L17.5851 19L12 13.4149L6.41487 19L5 17.5851L10.5851 12L5 6.41487Z"
+              fill="#F2F2F2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+
+  <!-- <a href="" class="lucky"></a> -->
 
 </body>
 
