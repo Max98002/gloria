@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -27,22 +27,23 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.popup-slider__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.popup-slider__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
-			speed: 800,
-
+			slidesPerView: "auto",
+			spaceBetween: 90,
+			autoHeight: false,
+			speed: 300,
+			watchOverflow: true,
+			centeredSlides: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
@@ -56,12 +57,13 @@ function initSliders() {
 			*/
 
 			// Пагинация
-			/*
+
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
+				type: "fraction",
 			},
-			*/
+
 
 			// Скроллбар
 			/*
@@ -78,30 +80,32 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
+					spaceBetween: 10,
 					autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
 					spaceBetween: 20,
 				},
 				992: {
-					slidesPerView: 3,
 					spaceBetween: 20,
 				},
 				1268: {
-					slidesPerView: 4,
 					spaceBetween: 30,
 				},
 			},
-			*/
 			// События
 			on: {
-
+				init: function (swiper) {
+					const allSlides = document.querySelector('.fraction-controll__all');
+					const allSlidesItems = document.querySelectorAll('.popup-slider__slide:not(.swiper-slide-duplicate)');
+					allSlides.innerHTML = allSlidesItems.length < 10 ? `0${allSlidesItems.length}` : allSlidesItems.length;
+				},
+				slideChange: function (swiper) {
+					const currentSlide = document.querySelector('.fraction-controll__current');
+					currentSlide.innerHTML = swiper.realIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : swiper.realIndex + 1;
+				}
 			}
 		});
 	}
