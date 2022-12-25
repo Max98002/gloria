@@ -95,7 +95,7 @@ $lapse: 30s;
 		-webkit-animation-name: ticker;
 		animation-name: ticker;
 
-		animation-play-state: paused; // тут запускаєм рух рядку
+		// animation-play-state: paused; // тут запускаєм рух рядку
 
 		@media (any-hover: hover) {
 			&:hover {

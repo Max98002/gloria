@@ -356,8 +356,6 @@ body {
   animation-iteration-count: infinite;
   -webkit-animation-name: ticker;
   animation-name: ticker;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
 }
 
 .ticker-wrap .ticker__headline {
