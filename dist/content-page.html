@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221201111501">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221225123020">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +41,11 @@
 				<div class="header__option option-header">
 					<div class="option-header__wrapper">
 						<a href="#" class="option-header__bookmark bookmark-options">
-							<img src="img/icons/bookmark.svg" class="bookmark-options__icon" alt="Bookmark">
+							<!-- <img src="img/icons/bookmark.svg" class="bookmark-options__icon" alt="Bookmark"> -->
+							<svg class="bookmark-options__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.83398 3.33398H14.1673V15.834L10.4741 13.8489C10.1785 13.69 9.82284 13.69 9.52721 13.8489L5.83398 15.834V3.33398Z" fill="#7C7B74" />
+							</svg>
+
 							<span class="bookmark-options__text">Закладки</span>
 							<!-- add class bookmark-options__no-null -->
 							<span class="bookmark-options__badge bookmark-options__no-null">32</span>
@@ -304,12 +308,12 @@
 
 							</div>
 							<div class="about-hero__btns btns-about">
-								<button class="btns-about__btn btns-about__reviews">
+								<a href="#reviews-block" class="btns-about__btn btns-about__reviews">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M18 9.04933L13.3552 13.7436V3.98956L10.6583 3.9835V13.7375L6.01349 9.02239V12.8857L12.0067 18.9697L18 12.9126V9.04933Z" fill="white" />
 									</svg>
 									<span>49 відгуків</span>
-								</button>
+								</a>
 								<button class="btns-about__btn btns-about__watch">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M18.4806 12.8682C19.1524 12.4843 19.1524 11.5157 18.4806 11.1318L7.49614 4.85494C6.82948 4.47399 6 4.95536 6 5.72318V18.2768C6 19.0446 6.82948 19.526 7.49614 19.1451L18.4806 12.8682Z" fill="white" />
@@ -330,7 +334,7 @@
 
 			<div class="page__reviews reviews-page">
 				<div class="reviews-page__container">
-					<div class="reviews-page__wrapper">
+					<div id="reviews-block" class="reviews-page__wrapper">
 						<div class="reviews-page__summary summary-reviews">
 							<div class="summary-reviews__title">302 оцінки, 49 відгуків</div>
 							<div class="summary-reviews__rate rate-list">
@@ -400,15 +404,32 @@
 						<div class="reviews-page__block">
 							<div class="reviews-card">
 								<header class="reviews-card__header header-reviews">
-									<div class="header-reviews__user">
+									<a href="" class="header-reviews__user">
 										<img src="" alt="">
-									</div>
+									</a>
 									<div class="header-reviews__info">
-										<div class="header-reviews__name">Степан Гіга</div>
-										<div class="header-reviews__author">Народний артист України</div>
+										<div class="header-reviews__name"><a href="">Степан Гіга</a></div>
+										<div class="header-reviews__author"><a href="">Народний артист України</a></div>
 									</div>
 									<div class="header-reviews__rate-icon">
-										<img src="img/icons/star.svg" alt="">
+										<!-- <img src="img/icons/star.svg" alt=""> -->
+										<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g filter="url(#filter0_d_4903_7905)">
+												<path d="M21.6531 7.36413L18.0622 2.12451C17.0692 0.675581 14.9308 0.675584 13.9378 2.12451L10.3469 7.36413C10.1518 7.64872 9.86465 7.85738 9.5337 7.95493L3.44088 9.75099C1.756 10.2477 1.09522 12.2813 2.16638 13.6735L6.03989 18.7078C6.25028 18.9812 6.35998 19.3189 6.35049 19.6638L6.17586 26.0134C6.12756 27.7693 7.8575 29.0262 9.51253 28.4376L15.4974 26.3094C15.8225 26.1938 16.1775 26.1938 16.5026 26.3094L22.4875 28.4376C24.1425 29.0262 25.8724 27.7693 25.8241 26.0134L25.6495 19.6638C25.64 19.3189 25.7497 18.9812 25.9601 18.7078L29.8336 13.6735C30.9048 12.2813 30.244 10.2477 28.5591 9.75099L22.4663 7.95493C22.1354 7.85738 21.8482 7.64872 21.6531 7.36413Z" fill="#FFEC45" stroke="#161615" />
+											</g>
+											<defs>
+												<filter id="filter0_d_4903_7905" x="0" y="0" width="34" height="34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+													<feFlood flood-opacity="0" result="BackgroundImageFix" />
+													<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+													<feOffset dx="2" dy="2" />
+													<feComposite in2="hardAlpha" operator="out" />
+													<feColorMatrix type="matrix" values="0 0 0 0 0.0196078 0 0 0 0 0.0156863 0 0 0 0 0.00392157 0 0 0 1 0" />
+													<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4903_7905" />
+													<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4903_7905" result="shape" />
+												</filter>
+											</defs>
+										</svg>
+
 										<span class="header-reviews__rate_count">4</span>
 									</div>
 								</header>
@@ -416,49 +437,7 @@
 									Дякую всім за зусилля!</p>
 								<ul class="reviews-card__date date-reviews">
 									<li class="date-reviews__item">Бер 25, 2022</li>
-									<li class="date-reviews__item">Переглянути оригінал</li>
-								</ul>
-							</div>
-							<div class="reviews-card">
-								<header class="reviews-card__header header-reviews">
-									<div class="header-reviews__user">
-										<img src="" alt="">
-									</div>
-									<div class="header-reviews__info">
-										<div class="header-reviews__name">Степан Гіга</div>
-										<div class="header-reviews__author">Народний артист України</div>
-									</div>
-									<div class="header-reviews__rate-icon">
-										<img src="img/icons/star.svg" alt="">
-										<span class="header-reviews__rate_count">4</span>
-									</div>
-								</header>
-								<p class="reviews-card__text">Неймовірне кіно, раджу всім до перегляду. Воно не залишить вас байдужим.
-									Дякую всім за зусилля!</p>
-								<ul class="reviews-card__date date-reviews">
-									<li class="date-reviews__item">Бер 25, 2022</li>
-									<li class="date-reviews__item">Переглянути оригінал</li>
-								</ul>
-							</div>
-							<div class="reviews-card">
-								<header class="reviews-card__header header-reviews">
-									<div class="header-reviews__user">
-										<img src="" alt="">
-									</div>
-									<div class="header-reviews__info">
-										<div class="header-reviews__name">Степан Гіга</div>
-										<div class="header-reviews__author">Народний артист України</div>
-									</div>
-									<div class="header-reviews__rate-icon">
-										<img src="img/icons/star.svg" alt="">
-										<span class="header-reviews__rate_count">4</span>
-									</div>
-								</header>
-								<p class="reviews-card__text">Неймовірне кіно, раджу всім до перегляду. Воно не залишить вас байдужим.
-									Дякую всім за зусилля!</p>
-								<ul class="reviews-card__date date-reviews">
-									<li class="date-reviews__item">Бер 25, 2022</li>
-									<li class="date-reviews__item">Переглянути оригінал</li>
+									<li class="date-reviews__item"><a href="">Переглянути оригінал</a></li>
 								</ul>
 							</div>
 
@@ -1036,7 +1015,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221201111501"></script>
+	<script src="js/app.min.js?_v=20221225123020"></script>
 
 	<!-- <a href="" class="lucky"></a> -->
 

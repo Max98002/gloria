@@ -335,6 +335,7 @@ body {
   overflow: hidden;
   height: 5rem;
   background-color: var(--inverse-surface);
+  padding-left: 100%;
   -webkit-box-sizing: content-box !important;
           box-sizing: content-box !important;
 }
@@ -344,6 +345,7 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   white-space: nowrap;
+  padding-right: 100%;
   -webkit-box-sizing: content-box !important;
           box-sizing: content-box !important;
   -webkit-animation-duration: 30s;
@@ -545,6 +547,9 @@ body {
 
 .breadcrumbs__link {
   text-decoration: none;
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
 }
 
 .breadcrumbs__current {
@@ -1374,6 +1379,10 @@ body {
   text-decoration: none;
 }
 
+.reviews-card a {
+  text-decoration: none;
+}
+
 .header-reviews {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1949,7 +1958,16 @@ body {
   margin-right: 0.5rem;
 }
 
+.bookmark-options__icon path {
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+}
+
 .bookmark-options__text {
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
   margin-right: 0.5rem;
 }
 
@@ -1971,6 +1989,9 @@ body {
   background-color: var(--disabled);
   line-height: 1;
   border-radius: 1.1875rem;
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
 }
 
 .bookmark-options__no-null {
@@ -1992,6 +2013,9 @@ body {
 
 .profile-options__text {
   margin-right: 0.5rem;
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
 }
 
 .profile-options__icon {
@@ -2128,6 +2152,9 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.375rem 0;
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
 }
 
 .menu-footer__badge {
@@ -2146,11 +2173,19 @@ body {
   height: 1.25rem;
   background-color: var(--primary-container);
   color: var(--on-primary-container);
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
 }
 
 .top-content {
   margin-bottom: 11.25rem;
   padding-top: 4.5rem;
+}
+
+.top-content__cards {
+  display: -ms-grid;
+  display: grid;
 }
 
 .top-movie {
@@ -2174,6 +2209,12 @@ body {
   position: relative;
   overflow: hidden;
   padding-bottom: 100%;
+}
+
+.top-movie__img-ibg img {
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
 }
 
 .top-movie__info {
@@ -2464,11 +2505,18 @@ body {
 }
 
 .card-content {
+  position: relative;
   text-decoration: none;
 }
 
 .card-content__image-ibg {
   padding-bottom: 150%;
+}
+
+.card-content__image-ibg img {
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
 }
 
 .card-content__info {
@@ -2532,6 +2580,9 @@ body {
   height: 4.5rem;
   border: 1px solid var(--surface-variant-outline);
   border-radius: 5.625rem;
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
 }
 
 .hero-page__image {
@@ -2754,6 +2805,14 @@ body {
 
 .about-hero__btns {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
 }
 
 .btns-about__btn {
@@ -2787,6 +2846,7 @@ body {
 }
 
 .btns-about__reviews {
+  text-decoration: none;
   padding: 1rem 1.75rem;
   border: 4px solid var(--surface-variant-outline);
 }
@@ -4092,8 +4152,8 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: auto;
   -webkit-transition: opacity 300ms ease 0s;
   -o-transition: opacity 300ms ease 0s;
   transition: opacity 300ms ease 0s;
@@ -4154,9 +4214,19 @@ body {
   display: inline-flex;
   width: 1rem;
   height: 1rem;
-  border-radius: 50%;
-  background-color: var(--primary);
   margin: 0 2rem;
+}
+
+.menu-top__item:nth-child(1)::after {
+  background: url("../img/icons/purple-star.svg") no-repeat center 100%;
+}
+
+.menu-top__item:nth-child(2)::after {
+  background: url("../img/icons/triangle.svg") no-repeat center 100%;
+}
+
+.menu-top__item:nth-child(3)::after {
+  background: url("../img/icons/circle.svg") no-repeat center 100%;
 }
 
 .menu-top__text {
@@ -4167,6 +4237,8 @@ body {
   line-height: 113%;
   text-transform: uppercase;
   margin-right: 2rem;
+  color: var(--background);
+  text-shadow: -1px 0 var(--on-disabled), 0 1px var(--on-disabled), 1px 0 var(--on-disabled), 0 -1px var(--on-disabled);
 }
 
 .menu-top__image {
@@ -4304,8 +4376,6 @@ body {
   }
 
   .top-content__cards {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: (42.8571428571%)[2];
     grid-template-columns: repeat(2, 42.8571428571%);
     -webkit-box-pack: justify;
@@ -4358,15 +4428,16 @@ body {
   }
 
   .about-hero__btns {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 1.5rem;
   }
 
@@ -4406,7 +4477,9 @@ body {
   }
 
   .breadcrumbs__item:first-child::before {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .button-filter__text {
@@ -4551,8 +4624,15 @@ body {
     width: 100%;
   }
 
-  .btns-about__btn:not(:last-child) {
-    margin-bottom: 1.25rem;
+  .btns-about__reviews {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .reviews-page__block {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .reviews-page__more {
@@ -4575,6 +4655,15 @@ body {
 
   .no-reviews .rate-movie {
     padding: 0.75rem 1rem;
+  }
+
+  .feedback-page__cards {
+    margin: 0;
+    width: 100% !important;
+  }
+
+  .feedback__card {
+    max-width: 100% !important;
   }
 
   .user-profile__container {
@@ -5792,16 +5881,20 @@ body {
     border-radius: 12px;
   }
 
+  .breadcrumbs__link:hover {
+    color: var(--primary);
+  }
+
   .heading-tabs__link:hover {
     color: var(--primary);
   }
 
   .button-filter:hover {
-    color: var(--on-background);
+    color: var(--primary);
   }
 
   .button-filter:hover .button-filter__icon path {
-    fill: var(--on-background);
+    fill: var(--primary);
   }
 
   .feedback-tabs__link:hover {
@@ -5838,8 +5931,40 @@ body {
     cursor: pointer;
   }
 
+  .bookmark-options:hover .bookmark-options__text {
+    color: var(--primary);
+  }
+
+  .bookmark-options:hover .bookmark-options__icon path {
+    fill: var(--primary);
+  }
+
+  .bookmark-options:hover .bookmark-options__badge {
+    background: var(--primary);
+    color: var(--on-primary);
+  }
+
+  .profile-options__text:hover {
+    color: var(--primary);
+  }
+
+  .menu-footer__link:hover {
+    color: var(--primary);
+  }
+
+  .menu-footer__link:hover .menu-footer__badge {
+    background-color: var(--primary);
+    color: var(--on-primary);
+  }
+
   .top-content__card:hover .content-card__title {
     color: var(--primary);
+  }
+
+  .top-content__card:hover .top-movie__img-ibg img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
   }
 
   .rate-movie:hover {
@@ -5862,6 +5987,16 @@ body {
 
   .card-content:hover .content-card__title {
     color: var(--primary);
+  }
+
+  .card-content:hover .card-content__image-ibg img {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
+  .hero-page__play:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 
   .gallery-hero:hover {

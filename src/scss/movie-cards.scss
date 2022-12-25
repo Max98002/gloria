@@ -67,6 +67,7 @@
 	}
 }
 .card-content {
+	position: relative;
 	// .card-content__image
 	text-decoration: none;
 
@@ -75,11 +76,17 @@
 			.content-card__title {
 				color: var(--primary);
 			}
+			.card-content__image-ibg img {
+				transform: scale(1.05);
+			}
 		}
 	}
 
 	&__image-ibg {
 		padding-bottom: 150%;
+		img {
+			transition: all 300ms ease 0s;
+		}
 	}
 	// .card-content__info
 	&__info {

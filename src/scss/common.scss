@@ -73,13 +73,13 @@ $lapse: 30s;
 	height: rem(80);
 	@include adaptiveValue("height", 80, 72, 3, 1440, 375);
 	background-color: var(--inverse-surface);
-	// padding-left: 100%; // треба розкоментити щоб почався рух
+	padding-left: 100%; // треба розкоментити щоб почався рух
 	box-sizing: content-box !important;
 
 	.ticker {
 		display: inline-flex;
 		white-space: nowrap;
-		// padding-right: 100%; // треба розкоментити щоб почався рух
+		padding-right: 100%; // треба розкоментити щоб почався рух
 		box-sizing: content-box !important;
 
 		-moz-animation-duration: $lapse;
@@ -288,7 +288,7 @@ $lapse: 30s;
 					100%;
 				transform: scale(-1, 1);
 				@media (max-width: $mobile) {
-					display: block;
+					display: flex;
 				}
 			}
 		}
@@ -296,6 +296,12 @@ $lapse: 30s;
 	// .breadcrumbs__link
 	&__link {
 		text-decoration: none;
+		transition: all 300ms ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
 	}
 	// .breadcrumbs__current
 	&__current {
@@ -429,10 +435,10 @@ $lapse: 30s;
 	transition: all 300ms ease 0s;
 	@media (any-hover: hover) {
 		&:hover {
-			color: var(--on-background);
+			color: var(--primary);
 			.button-filter__icon {
 				path {
-					fill: var(--on-background);
+					fill: var(--primary);
 				}
 			}
 		}
@@ -1084,6 +1090,9 @@ $lapse: 30s;
 		font-size: rem(18);
 		line-height: 131%;
 		color: var(--tetriary);
+		text-decoration: none;
+	}
+	a {
 		text-decoration: none;
 	}
 }

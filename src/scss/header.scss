@@ -203,12 +203,32 @@
 	// .bookmark-options__icon
 	&__icon {
 		margin-right: rem(8);
+		path {
+			transition: all 300ms ease 0s;
+		}
 	}
 	// .bookmark-options__text
 	&__text {
+		transition: all 300ms ease 0s;
 		margin-right: rem(8);
 		@media (max-width: $mobile) {
 			display: none;
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			.bookmark-options__text {
+				color: var(--primary);
+			}
+			.bookmark-options__icon {
+				path {
+					fill: var(--primary);
+				}
+			}
+			.bookmark-options__badge {
+				background: var(--primary);
+				color: var(--on-primary);
+			}
 		}
 	}
 	// .bookmark-options__badge
@@ -224,6 +244,7 @@
 		background-color: var(--disabled);
 		line-height: 1;
 		border-radius: rem(19);
+		transition: all 300ms ease 0s;
 	}
 	// .bookmark-options__no-null
 	&__no-null {
@@ -239,6 +260,12 @@
 		margin-right: rem(8);
 		@media (max-width: $mobile) {
 			display: none;
+		}
+		transition: all 300ms ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
 		}
 	}
 	// .profile-options__icon

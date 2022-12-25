@@ -5,6 +5,10 @@
 	// .feedback-page__cards
 	&__cards {
 		margin: 0 auto;
+		@media (max-width: $mobile) {
+			margin: 0;
+			width: 100% !important;
+		}
 	}
 	// .feedback-page__block
 	&__block {
@@ -18,5 +22,8 @@
 	&__card {
 		max-width: rem(360);
 		width: 100%;
+		@media (max-width: $mobile) {
+			max-width: 100% !important;
+		}
 	}
 }

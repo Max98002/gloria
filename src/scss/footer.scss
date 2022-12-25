@@ -75,6 +75,17 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		padding: rem(6) 0;
+		transition: all 300ms ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+
+				.menu-footer__badge {
+					background-color: var(--primary);
+					color: var(--on-primary);
+				}
+			}
+		}
 	}
 	// .menu-footer__badge
 	&__badge {
@@ -88,6 +99,8 @@
 
 		background-color: var(--primary-container);
 		color: var(--on-primary-container);
+
+		transition: all 300ms ease 0s;
 	}
 }
 .bottom-footer {

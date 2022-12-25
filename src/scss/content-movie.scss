@@ -8,8 +8,8 @@
 	}
 	// .top-content__cards
 	&__cards {
+		display: grid;
 		@media (min-width: $mobile) {
-			display: grid;
 			grid-template-columns: repeat(2, percent(540, 1260));
 			justify-content: space-between;
 			align-items: flex-start;
@@ -23,6 +23,9 @@
 			&:hover {
 				.content-card__title {
 					color: var(--primary);
+				}
+				.top-movie__img-ibg img {
+					transform: scale(1.1);
 				}
 			}
 		}
@@ -50,6 +53,9 @@
 		position: relative;
 		overflow: hidden;
 		padding-bottom: 100%;
+		img {
+			transition: all 300ms ease 0s;
+		}
 	}
 	@media (min-width: $mobile) {
 		&:nth-child(2) {

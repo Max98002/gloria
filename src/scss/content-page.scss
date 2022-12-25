@@ -34,9 +34,15 @@
 		height: rem(72);
 		border: 1px solid var(--surface-variant-outline);
 		border-radius: rem(90);
+		transition: all 300ms ease 0s;
 		@media (max-width: $mobile) {
 			flex: 0 0 rem(52);
 			height: rem(52);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba(255, 255, 255, 0.1);
+			}
 		}
 	}
 	// .hero-page__gallery
@@ -251,10 +257,13 @@
 	// .about-hero__btns
 	&__btns {
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
 		@media (min-width: $mobile) {
-			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+			flex-direction: row;
 			gap: rem(24);
 		}
 	}
@@ -284,13 +293,11 @@
 
 		@media (max-width: $mobile) {
 			width: 100%;
-			&:not(:last-child) {
-				margin-bottom: rem(20);
-			}
 		}
 	}
 	// .btns-about__reviews
 	&__reviews {
+		text-decoration: none;
 		padding: rem(16) rem(28);
 		border: 4px solid var(--surface-variant-outline);
 		&:hover {
@@ -299,6 +306,9 @@
 			svg path {
 				fill: var(--primary);
 			}
+		}
+		@media (max-width: $mobile) {
+			order: 1;
 		}
 	}
 	// .btns-about__watch
@@ -343,6 +353,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
+		@media (max-width: $mobile) {
+			margin-left: rem(-16);
+			margin-right: rem(-16);
+		}
 	}
 	// .reviews-page__more
 	&__more {
