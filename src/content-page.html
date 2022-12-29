@@ -15,6 +15,13 @@
         <div class="listing-headline content-page__breadcrumbs">
           <div class="listing-headline__container hero-page__breadcrumbs">
             <nav class="listing-headline__breadcrumbs breadcrumbs">
+              <button class="breadcrumbs__item__back-mobile">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M21.8636 12.5L14.5 20.5L21.8636 28.5L23.5 26.7222L17.7728 20.4998L23.5 14.2774L21.8636 12.5Z"
+                    fill="#F2F2F2" />
+                </svg>
+              </button>
               <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
                   <a href="#" class="breadcrumbs__link">Найкращий український контент</a>
@@ -27,7 +34,7 @@
                 </li>
               </ul>
             </nav>
-            <button class="listing-headline__bookmark">
+            <!-- <button class="listing-headline__bookmark">
               <svg width="40" height="58" viewBox="0 0 40 58" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_bd_5201_8668)">
                   <path d="M0 0H40V56L20.4484 46.1916C20.1662 46.0501 19.8338 46.0501 19.5516 46.1916L0 56V0Z"
@@ -58,7 +65,24 @@
               <span>
                 <img src="img/icons/plus.svg" alt="">
               </span>
-            </button>
+            </button> -->
+            <div class="bookmark-icon listing-headline__bookmark">
+              <div class="bookmark-icon__icon bookmark-icon__icon_plus">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19.6803 11.0999H12.8832V4.30278C12.8832 4.13449 12.7486 4 12.5804 4H11.3858C11.2175 4 11.083 4.13461 11.083 4.30278V11.0999L4.30278 11.1C4.13449 11.1 4 11.2346 4 11.4028V12.5974C4 12.7656 4.13461 12.9001 4.30278 12.9001H11.0999V19.6972C11.0999 19.8655 11.2345 20 11.4026 20H12.5972C12.7655 20 12.9 19.8654 12.9 19.6972L12.9001 12.8833H19.6972C19.8655 12.8833 20 12.7487 20 12.5805V11.3859C19.9833 11.2345 19.8487 11.0999 19.6805 11.0999L19.6803 11.0999Z"
+                    fill="#7C7B74" stroke="#7C7B74" />
+                </svg>
+              </div>
+              <div class="bookmark-icon__icon bookmark-icon__icon_check">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.7258 13.4295L18.0829 6.71475L19.2249 7.76986L9.92243 16.284L4.78587 11.4181L5.94056 10.4645L9.1121 13.4263L9.11223 13.4264C9.56171 13.8459 10.2751 13.8469 10.7258 13.4295Z"
+                    fill="white" stroke="white" stroke-width="1.33333" />
+                </svg>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -87,36 +111,23 @@
 
             <div class="hero-page__about about-hero">
               <div class="about-hero__info info-about">
-                <button class="info-about__bookmark">
-                  <svg width="40" height="58" viewBox="0 0 40 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_bd_5201_8668)">
-                      <path d="M0 0H40V56L20.4484 46.1916C20.1662 46.0501 19.8338 46.0501 19.5516 46.1916L0 56V0Z"
-                        fill="#050401" fill-opacity="0.3" shape-rendering="crispEdges" />
+
+                <div class="bookmark-icon info-about__bookmark">
+                  <div class="bookmark-icon__icon bookmark-icon__icon_plus">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
-                        d="M0.5 0.5H39.5V55.1898L20.6726 45.7447C20.2493 45.5324 19.7507 45.5324 19.3274 45.7447L0.5 55.1898V0.5Z"
-                        stroke="#5C5B55" stroke-opacity="0.3" shape-rendering="crispEdges" />
-                    </g>
-                    <defs>
-                      <filter id="filter0_bd_5201_8668" x="-44" y="-44" width="128" height="144"
-                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="22" />
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_5201_8668" />
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                          result="hardAlpha" />
-                        <feOffset dy="2" />
-                        <feComposite in2="hardAlpha" operator="out" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
-                        <feBlend mode="normal" in2="effect1_backgroundBlur_5201_8668"
-                          result="effect2_dropShadow_5201_8668" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_5201_8668" result="shape" />
-                      </filter>
-                    </defs>
-                  </svg>
-                  <span>
-                    <img src="@img/icons/plus.svg" alt="">
-                  </span>
-                </button>
+                        d="M19.6803 11.0999H12.8832V4.30278C12.8832 4.13449 12.7486 4 12.5804 4H11.3858C11.2175 4 11.083 4.13461 11.083 4.30278V11.0999L4.30278 11.1C4.13449 11.1 4 11.2346 4 11.4028V12.5974C4 12.7656 4.13461 12.9001 4.30278 12.9001H11.0999V19.6972C11.0999 19.8655 11.2345 20 11.4026 20H12.5972C12.7655 20 12.9 19.8654 12.9 19.6972L12.9001 12.8833H19.6972C19.8655 12.8833 20 12.7487 20 12.5805V11.3859C19.9833 11.2345 19.8487 11.0999 19.6805 11.0999L19.6803 11.0999Z"
+                        fill="#7C7B74" stroke="#7C7B74" />
+                    </svg>
+                  </div>
+                  <div class="bookmark-icon__icon bookmark-icon__icon_check">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.7258 13.4295L18.0829 6.71475L19.2249 7.76986L9.92243 16.284L4.78587 11.4181L5.94056 10.4645L9.1121 13.4263L9.11223 13.4264C9.56171 13.8459 10.2751 13.8469 10.7258 13.4295Z"
+                        fill="white" stroke="white" stroke-width="1.33333" />
+                    </svg>
+                  </div>
+                </div>
 
                 <div class="info-about__block">
                   <div class="info-card__rate rate-info">
@@ -251,22 +262,22 @@
                 <div data-showmore="size" data-showmore-media="736,max" class="content-card__block">
                   <ul data-showmore-content="0" class="content-card__list info-about__list">
                     <li class="content-card__item">
-                      <div class="content-card__link">Бойовик</div>
+                      <a href="" class="content-card__link">Бойовик</a>
                     </li>
                     <li class="content-card__item">
-                      <div class="content-card__link">Воєнний</div>
+                      <a href="" class="content-card__link">Воєнний</a>
                     </li>
                     <li class="content-card__item">
-                      <div class="content-card__link">Документальний</div>
+                      <a href="" class="content-card__link">Документальний</a>
                     </li>
                     <li class="content-card__item">
-                      <div class="content-card__link">2021</div>
+                      <a href="" class="content-card__link">2021</a>
                     </li>
                     <li class="content-card__item">
-                      <div class="content-card__link">1 год 12 хв</div>
+                      <a href="" class="content-card__link">1 год 12 хв</a>
                     </li>
                     <li class="content-card__item">
-                      <div class="content-card__link">18+</div>
+                      <a href="" class="content-card__link">18+</a>
                     </li>
                   </ul>
 

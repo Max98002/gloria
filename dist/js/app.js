@@ -4870,6 +4870,8 @@
                 });
             }
         }));
+        const navHeight = document.querySelector(".reviews-page").offsetHeight;
+        document.documentElement.style.setProperty("--scroll-padding", navHeight + "px");
         window["FLS"] = true;
         isWebp();
         showMore();

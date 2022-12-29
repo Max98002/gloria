@@ -71,6 +71,19 @@
 		@media (max-width: $mobile) {
 			justify-content: center;
 		}
+		@media (any-hover: hover) {
+			&:hover {
+				cursor: pointer;
+				.search-header__button svg path {
+					fill: var(--primary);
+				}
+				.search-header__input {
+					&::placeholder {
+						color: var(--primary);
+					}
+				}
+			}
+		}
 	}
 	// .search-header__button
 	&__button {
@@ -85,6 +98,10 @@
 			width: rem(36);
 			height: rem(32);
 		}
+
+		svg path {
+			transition: all 300ms ease 0s;
+		}
 	}
 	// .search-header__input
 	&__input {
@@ -95,6 +112,12 @@
 		background-color: transparent;
 		padding-left: rem(36);
 		color: var(--secondary);
+
+		transition: all 300ms ease 0s;
+
+		&::placeholder {
+			transition: all 300ms ease 0s;
+		}
 
 		@media (max-width: $mobile) {
 			display: none;
@@ -137,7 +160,8 @@
 		.search-header__button {
 			width: rem(32);
 			height: rem(32);
-			img {
+			img,
+			svg {
 				width: 100%;
 				height: 100%;
 			}

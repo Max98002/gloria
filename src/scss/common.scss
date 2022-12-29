@@ -215,35 +215,11 @@ $lapse: 30s;
 	&__filter {
 	}
 	&__bookmark {
-		position: relative;
+		position: relative !important;
 		z-index: 2;
-		flex: 0 0 rem(32);
-		width: rem(32);
-		height: rem(48);
-		display: flex;
-		align-items: flex-start;
-		justify-content: center;
 		margin-left: auto;
-		span {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: rem(6);
-			left: 50%;
-			width: rem(20);
-			height: rem(20);
-			transform: translateX(-50%);
-			img {
-				width: 100%;
-				height: 100%;
-			}
-		}
-		svg {
-			width: 100%;
-			height: 100%;
-		}
 		@media (min-width: $mobile) {
-			display: none;
+			display: none !important;
 		}
 	}
 }
@@ -308,6 +284,13 @@ $lapse: 30s;
 		color: var(--on-disabled);
 	}
 }
+
+.breadcrumbs__item__back-mobile {
+	@media (min-width: $mobile) {
+		display: none;
+	}
+}
+
 .heading-listing {
 	// .heading-listing__content
 	&__content {
@@ -1441,6 +1424,68 @@ $lapse: 30s;
 	}
 	// .fraction-controll__all
 	&__all {
+	}
+}
+
+.bookmark-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	background-color: red;
+	width: rem(40);
+	height: rem(56);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding-top: rem(8);
+	box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(22px);
+	background: rgba(5, 4, 1, 0.3);
+	transition: all 300ms ease 0s;
+	@media (max-width: $mobile) {
+		width: rem(32);
+		height: rem(48);
+	}
+	// .bookmark-icon__icon
+	&__icon {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		&_plus {
+			transition: all 300ms ease 0s;
+			svg path {
+				transition: all 300ms ease 0s;
+			}
+		}
+		&_check {
+			display: none;
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			cursor: pointer;
+			background: rgba(5, 4, 1, 0.5);
+			.bookmark-icon__icon_plus {
+				transform: scale(1.1);
+				svg path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+	&._check {
+		background: #6e45ff;
+		.bookmark-icon__icon {
+			&_plus {
+				display: none;
+			}
+			&_check {
+				display: flex;
+			}
+		}
 	}
 }
 

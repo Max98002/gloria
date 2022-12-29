@@ -43,6 +43,13 @@
 		text-transform: uppercase;
 		color: var(--secondary);
 		text-decoration: none;
+
+		transition: all 300ms ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
 	}
 	// .main-footer__menu
 	&__menu {
