@@ -1111,7 +1111,7 @@ body {
   pointer-events: auto;
 }
 
-.popup-filter.active .popup-look__wrapper {
+.popup-filter.active .popup-filter__wrapper {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);

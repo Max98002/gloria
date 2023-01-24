@@ -855,7 +855,8 @@ $lapse: 30s;
 	&.active {
 		background-color: rgba(255, 255, 255, 0.3);
 		pointer-events: auto;
-		.popup-look__wrapper {
+		// .popup-filter__wrapper
+		.popup-filter__wrapper {
 			transform: translateX(0);
 		}
 	}
